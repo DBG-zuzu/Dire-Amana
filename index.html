@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dire Amana</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Dire Amana</h1>
+    </header>
+
+    <!-- Menu -->
+    <nav class="menu">
+      <ul>
+        <li><a href="#" data-section="dashboard">Dashboard</a></li>
+        <li><a href="#" data-section="customers">Customers</a></li>
+        <li><a href="#" data-section="transactions">Transactions</a></li>
+        <li><a href="#" data-section="reports">Reports</a></li>
+        <li><a href="#" data-section="settings">Settings</a></li>
+      </ul>
+    </nav>
+
+    <!-- Dashboard Section -->
+    <div id="dashboardSection" class="dashboard-section">
+      <!-- Search and Customer Balance Section -->
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by Name or Contact">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+      <div id="customerBalanceSection" class="customer-balance">
+        <h2>Customer Details</h2>
+        <p><strong>Name:</strong> <span id="customerNameDisplay"></span></p>
+        <p><strong>Balance:</strong> <span id="customerBalanceDisplay">$0.00</span></p>
+        <p><strong>Last Transaction:</strong> <span id="lastTransactionDisplay">N/A</span></p>
+        <div class="button-group">
+          <button type="button" id="editCustomerButton">Edit Customer</button>
+          <button type="button" id="clearDataButton">Clear Data</button>
+          <button type="button" id="viewHistoryButton">View History</button>
+        </div>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="summary">
+        <div class="summary-item">
+          <h3>Total Balance</h3>
+          <p id="totalBalance">$0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Unpaid Orders</h3>
+          <p id="unpaidOrders">0</p>
+        </div>
+        <div class="summary-item">
+          <h3>Total Transactions</h3>
+          <p id="totalTransactions">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customers Section -->
+    <div id="customersSection" class="customers-section" style="display: none;">
+      <!-- Customer Registration/Edit Form -->
+      <div class="form-container">
+        <h2 id="formTitle">Register Customer</h2>
+        <form id="customerForm">
+          <label for="customerName">Customer Name:</label>
+          <input type="text" id="customerName" required>
+
+          <label for="customerContact">Contact:</label>
+          <input type="text" id="customerContact" required>
+
+          <label for="customerEmail">Email:</label>
+          <input type="email" id="customerEmail">
+
+          <label for="customerAddress">Address:</label>
+          <input type="text" id="customerAddress">
+
+          <label for="initialBalance">Initial Balance:</label>
+          <input type="number" id="initialBalance" min="0" step="0.01" required>
+
+          <div class="button-group">
+            <button type="button" id="registerButton">Register</button>
+            <button type="button" id="updateCustomerButton">Update</button>
+            <button type="button" id="cancelEditButton">Cancel</button>
+          </div>
+        </form>
+        <!-- Message display area -->
+        <p id="message" style="display: none;"></p>
+      </div>
+
+      <!-- Customer Balances Section -->
+      <div class="customer-balances">
+        <h2>Customer Balances</h2>
+        <ul id="customerBalanceList"></ul>
+      </div>
+    </div>
+
+    <!-- Transactions Section -->
+    <div id="transactionsSection" class="transactions-section" style="display: none;">
+      <!-- Transaction Form -->
+      <div class="form-container">
+        <h2>Add Transaction</h2>
+        <form id="transactionForm">
+          <label for="transactionCustomer">Customer Name:</label>
+          <input type="text" id="transactionCustomer" required>
+
+          <label for="transactionType">Type:</label>
+          <select id="transactionType" required>
+            <option value="Deposit">Deposit</option>
+            <option value="Withdrawal">Withdrawal</option>
+            <option value="Transfer">Transfer</option>
+          </select>
+
+          <label for="transactionMethod">Method:</label>
+          <select id="transactionMethod" required>
+            <option value="Cash">Cash</option>
+            <option value="TAAJ">TAAJ</option>
+            <option value="Superwallet">Superwallet</option>
+          </select>
+
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" min="0" step="0.01" required>
+
+          <label for="receiverName">Receiver Name (for Transfer):</label>
+          <input type="text" id="receiverName">
+
+          <!-- Button container -->
+          <div class="button-container">
+            <button type="button" id="addTransactionButton">Add Transaction</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Transaction List -->
+      <div class="transaction-list">
+        <h2>Recent Transactions</h2>
+        <table id="transactionTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Customer</th>
+              <th>Type</th>
+              <th>Method</th>
+              <th>Amount</th>
+              <th>Receiver</th>
+            </tr>
+          </thead>
+          <tbody id="transactionTableBody">
+            <!-- Rows will be added dynamically -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Transaction History Section (Hidden by default) -->
+      <div id="transactionHistorySection" class="transaction-history" style="display: none;">
+        <h2>Transaction History</h2>
+        <ul id="transactionHistoryList">
+          <!-- Transaction history items will be added here -->
+        </ul>
+        <button type="button" id="hideHistoryButton">Hide History</button>
+      </div>
+    </div>
+
+    <!-- Reports Section -->
+    <div id="reportsSection" class="reports-section" style="display: none;">
+      <!-- Report Section -->
+      <div class="report">
+        <h2>Transaction Report</h2>
+        <div class="report-summary">
+          <p>Total Deposits: <span id="totalDeposits">$0.00</span></p>
+          <p>Total Withdrawals: <span id="totalWithdrawals">$0.00</span></p>
+          <p>Total Transfers: <span id="totalTransfers">$0.00</span></p>
+        </div>
+        <canvas id="transactionChart"></canvas>
+      </div>
+
+      <!-- Order Form -->
+      <div class="form-container">
+        <h2>Add Order</h2>
+        <form id="orderForm">
+          <label for="supplierName">Supplier Name:</label>
+          <input type="text" id="supplierName" required>
+
+          <label for="orderType">Order Type:</label>
+          <select id="orderType" required>
+            <option value="Buy">Buy</option>
+            <option value="Sell">Sell</option>
+          </select>
+
+          <label for="orderAmount">Amount (USD):</label>
+          <input type="number" id="orderAmount" min="0" step="0.01" required>
+
+          <label for="orderRate">Rate:</label>
+          <input type="number" id="orderRate" min="0" step="0.01" required>
+
+          <label for="paidAmount">Paid Amount:</label>
+          <input type="number" id="paidAmount" min="0" step="0.01" required>
+
+          <button type="button" id="addOrderButton">Add Order</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Settings Section -->
+    <div id="settingsSection" class="settings-section" style="display: none;">
+      <h2>Settings</h2>
+      <div class="setting-option">
+        <label for="theme-select">Theme:</label>
+        <select id="theme-select">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+      <div class="setting-option">
+        <label for="language-select">Language:</label>
+        <select id="language-select">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+        </select>
+      </div>
+      <div class="setting-option">
+        <label>
+          <input type="checkbox" id="email-notifications"> Email Notifications
+        </label>
+      </div>
+      <button id="save-settings">Save Settings</button>
+    </div>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
