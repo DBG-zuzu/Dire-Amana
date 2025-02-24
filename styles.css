@@ -60,49 +60,7 @@ header {
   margin-top: 20px;
 }
 
-/* Settings Section Styles */
-.settings-section {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.settings-section h2 {
-  border-bottom: 2px solid #5cb85c;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-
-.setting-option {
-  margin-bottom: 15px;
-}
-
-.setting-option label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.setting-option select,
-.setting-option input[type="checkbox"] {
-  margin-top: 5px;
-}
-
-#save-settings {
-  background-color: #5cb85c;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#save-settings:hover {
-  background-color: #449d44;
-}
-
+/* Dashboard Section Styles */
 .search-bar {
   margin: 20px 0;
 }
@@ -161,6 +119,58 @@ header {
   margin: 5px 0;
 }
 
+.button-group {
+  margin-top: 20px;
+}
+
+.button-group button {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.button-group button:hover {
+  background-color: #449d44;
+}
+
+/* Summary Section Styles */
+.summary {
+  display: flex;
+  justify-content: space-around;
+  background: #e9e9e9;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.summary-item {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.summary-item p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5cb85c;
+}
+
+/* Customers Section Styles */
 .form-container {
   background: #fff;
   padding: 20px;
@@ -196,62 +206,7 @@ header {
   margin-top: 20px;
 }
 
-.form-container button {
-  background-color: #5cb85c;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.form-container button:hover {
-  background-color: #449d44;
-}
-
-.summary {
-  display: flex;
-  justify-content: space-around;
-  background: #e9e9e9;
-  padding: 20px 0;
-  margin-bottom: 20px;
-  border-radius: 4px;
-}
-
-.summary-item {
-  text-align: center;
-}
-
-.customer-balances {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.customer-balances h2 {
-  border-bottom: 2px solid #5cb85c;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
-.customer-balances ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.customer-balances li {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-.customer-balances li:last-child {
-  border-bottom: none;
-}
-
+/* Transactions Section Styles */
 .transaction-list {
   background: #fff;
   padding: 20px;
@@ -272,7 +227,8 @@ header {
   margin-top: 10px;
 }
 
-.transaction-list th, .transaction-list td {
+.transaction-list th,
+.transaction-list td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -282,35 +238,7 @@ header {
   background-color: #f4f4f4;
 }
 
-.transaction-history {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.transaction-history h2 {
-  border-bottom: 2px solid #5cb85c;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
-.transaction-history ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.transaction-history li {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-.transaction-history li:last-child {
-  border-bottom: none;
-}
-
+/* Reports Section Styles */
 .report {
   background: #fff;
   padding: 20px;
@@ -331,7 +259,50 @@ header {
   margin-bottom: 20px;
 }
 
-/* General button style */
+/* Settings Section Styles */
+.settings-section {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h2 {
+  border-bottom: 2px solid #5cb85c;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.setting-option {
+  margin-bottom: 15px;
+}
+
+.setting-option label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.setting-option select,
+.setting-option input[type="checkbox"] {
+  margin-top: 5px;
+}
+
+#save-settings {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#save-settings:hover {
+  background-color: #449d44;
+}
+
+/* General Button Styles */
 button {
   background-color: #5cb85c;
   color: white;
@@ -340,39 +311,9 @@ button {
   border-radius: 4px;
   cursor: pointer;
   margin-right: 10px;
-  font-size: 16px; /* Increased for better visibility */
+  font-size: 16px;
 }
 
 button:hover {
   background-color: #449d44;
-}
-
-/* Specific button group styling for form */
-.form-container .button-group {
-  margin-top: 20px;
-}
-
-.form-container .button-group button {
-  margin-right: 10px;
-}
-
-/* Style for the button container in the transaction form */
-.button-container {
-  text-align: center; /* Center the button */
-  margin-top: 20px; /* Add some space above the button */
-}
-
-/* Style for the "Add Transaction" button */
-#addTransactionButton {
-  background-color: #5cb85c; /* Green background */
-  color: white; /* White text */
-  padding: 10px 20px; /* Padding for better aesthetics */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Change cursor to a pointer on hover */
-  font-size: 16px; /* Slightly larger font size */
-}
-
-#addTransactionButton:hover {
-  background-color: #449d44; /* Darker green on hover */
 }
