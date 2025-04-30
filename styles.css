@@ -1,0 +1,3183 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+  margin: 20px 0;
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-results {
+  position: absolute;
+  width: 79%;
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.search-results a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.search-results a:last-child {
+  border-bottom: none;
+}
+
+.search-results a:hover {
+  background-color: #f9f9f9;
+}
+
+/* Customer Balance Section */
+.customer-balance {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-balance h2 {
+  color: #e8491d;
+  margin-top: 0;
+}
+
+.customer-balance p {
+  margin: 5px 0;
+}
+
+/* Form Styles */
+.form-container {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  color: #e8491d;
+  margin-top: 0;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="number"],
+.form-container select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  background-color: #505050;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #e8491d;
+}
+
+/* Summary Section */
+.summary {
+  display: flex;
+  justify-content: space-around;
+  background: #505050;
+  color: white;
+  padding: 20px 0;
+  border-radius: 4px;
+}
+
+.summary-item {
+  text-align: center;
+}
+
+.summary-item h3 {
+  margin-top: 0;
+}
+
+/* Customer Balances Section */
+.customer-balances {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-balances h2 {
+  color: #e8491d;
+  margin-top: 0;
+}
+
+.customer-balances ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.customer-balances li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.customer-balances li:last-child {
+  border-bottom: none;
+}
+
+/* Transaction List */
+.transaction-list {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-list h2 {
+  color: #e8491d;
+  margin-top: 0;
+}
+
+#transactionTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#transactionTable th {
+  background-color: #f4f4f4;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#transactionTable td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+#transactionTable tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Transaction History Section */
+.transaction-history {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-history h2 {
+  color: #e8491d;
+  margin-top: 0;
+}
+
+.transaction-history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-history li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction-history li:last-child {
+  border-bottom: none;
+}
+
+/* Report Section */
+.report {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.report h2 {
+  color: #e8491d;
+  margin-top: 0;
+}
+
+.report-summary {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.button-group button {
+  background-color: #505050;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #e8491d;
+}
+
+/* Button Container */
+.button-container {
+  text-align: center;
+}
+
+.button-container button {
+  margin: 20px auto;
+  display: block;
+}
+
+/* Navigation Bar */
+/* Essential navigation styles */
+.section {
+    display: none;
+}
+
+#dashboard.section {
+    display: block;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #e9ecef;
+}
+
+.nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.section.active {
+    display: block;
+}
+
+#dashboard {
+    display: block;
+}
+/* Navigation styles */
+.navbar {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #e9ecef;
+}
+
+.nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Section visibility */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.nav-link.active {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#transactions.section.active,
+#settings.section.active {
+    display: block;
+}
+
+#transactions.section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styles */
+.nav-link {
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #e9ecef;
+}
+
+.nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Make sure dashboard is visible by default */
+#dashboard.section {
+    display: block;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 20px;
+  color: white;
+  height: 70px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 25%;
+  text-align: left;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  width: 75%;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* Sections */
+.section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.section.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Remove duplicate and conflicting section styles */
+.section {
+    display: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.section.active {
+    display: block !important;
+    opacity: 1;
+}
+
+/* Remove these duplicate rules */
+/* Update the section visibility styles */
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.section.active {
+    display: block !important;
+    opacity: 1;
+}
+
+/* Remove any duplicate section display rules */
+#dashboard.section.active {
+    display: block;
+}
+
+/* Update navigation styles */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    color: #4CAF50;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Settings Section */
+/* Settings Styles */
+.settings-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.settings-group {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.settings-group h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.setting-item {
+    margin: 15px 0;
+}
+
+.setting-item h4 {
+    margin: 10px 0;
+    color: #666;
+}
+
+.setting-item select,
+.setting-item input[type="text"],
+.setting-item input[type="number"] {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.setting-item label {
+    display: block;
+    margin: 8px 0;
+    color: #555;
+}
+
+.setting-item button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.setting-item button:hover {
+    background: #0056b3;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+/* Theme Styles */
+body.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark .settings-group {
+    background: #2d2d2d;
+}
+
+body.dark .setting-item h4 {
+    color: #aaa;
+}
+
+body.dark select,
+body.dark input[type="text"],
+body.dark input[type="number"] {
+    background: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+.dark-theme button:hover {
+  background-color: #e8491d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .summary {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .summary-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .nav-link {
+    width: auto;
+    padding: 8px 10px;
+  }
+
+  .form-container input,
+  .form-container select {
+    width: 100%;
+  }
+}
+
+.menu {
+    margin-bottom: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    display: none;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: white;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+.notification.error {
+    background-color: #f44336;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.customer-details-search {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.customer-details-search input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#customerDetailsSection {
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#customerRecentTransactions {
+    list-style: none;
+    padding: 0;
+}
+
+#customerRecentTransactions li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.history-table th,
+.history-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.history-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.history-table .positive {
+    color: #4CAF50;
+}
+
+.history-table .negative {
+    color: #f44336;
+}
+
+.transaction-history {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c82333 !important;
+}
+
+.danger-button {
+    background: #dc3545 !important;
+}
+
+.danger-button:hover {
+    background: #c8233

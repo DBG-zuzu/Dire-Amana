@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amana Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-brand">Amana Dashboard</div>
+    <ul class="navbar-nav">
+      <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+      <li><a href="#customerDetails" class="nav-link">Customer Details</a></li>
+      <li><a href="#settings" class="nav-link">Settings</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section active">
+      <!-- Header -->
+      <header>
+        <h1>Amana Dashboard</h1>
+      </header>
+
+      <!-- Search and Customer Balance Section -->
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by Name or Contact">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+      <div id="customerBalanceSection" class="customer-balance">
+        <h2>Customer Details</h2>
+        <p><strong>Name:</strong> <span id="customerNameDisplay"></span></p>
+        <p><strong>Balance:</strong> <span id="customerBalanceDisplay">$0.00</span></p>
+        <p><strong>Last Transaction:</strong> <span id="lastTransactionDisplay">N/A</span></p>
+        <div class="button-group">
+          <button type="button" id="editCustomerButton">Edit Customer</button>
+          <button type="button" id="clearDataButton">Clear Data</button>
+          <button type="button" id="viewHistoryButton">View History</button>
+        </div>
+      </div>
+
+      <!-- Customer Registration/Edit Form -->
+      <div class="form-container">
+        <h2 id="formTitle">Register Customer</h2>
+        <form id="customerForm">
+          <label for="customerName">Customer Name:</label>
+          <input type="text" id="customerName" required>
+
+          <label for="customerContact">Contact:</label>
+          <input type="text" id="customerContact" required>
+
+          <label for="customerEmail">Email:</label>
+          <input type="email" id="customerEmail">
+
+          <label for="customerAddress">Address:</label>
+          <input type="text" id="customerAddress">
+
+          <label for="initialBalance">Initial Deposit:</label>
+          <input type="number" id="initialBalance" min="0" step="0.01" required>
+
+          <div class="button-group">
+            <button type="button" id="registerButton">Register</button>
+            <button type="button" id="updateCustomerButton">Save</button>
+            <button type="button" id="cancelEditButton">Cancel</button>
+          </div>
+        </form>
+        <p id="message" style="display: none;"></p>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="summary">
+        <div class="summary-item">
+          <h3>Total Balance</h3>
+          <p id="totalBalance">$0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Total Deposit</h3>
+          <p id="totalDeposit">$0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Total Transfer</h3>
+          <p id="totalTransfer">$0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Total Withdraw</h3>
+          <p id="totalWithdraw">$0.00</p>
+        </div>
+      </div>
+
+      <!-- Customer Balances Section -->
+      <div class="customer-balances">
+        <h2>Customer Balances</h2>
+        <ul id="customerBalanceList"></ul>
+      </div>
+
+      <!-- Transaction Form -->
+      <div class="form-container">
+        <h2>Add Transaction</h2>
+        <form id="transactionForm">
+          <label for="transactionCustomer">Customer Name:</label>
+          <input type="text" id="transactionCustomer" required>
+
+          <label for="transactionType">Type:</label>
+          <select id="transactionType" required>
+            <option value="Deposit">Deposit</option>
+            <option value="Withdrawal">Withdrawal</option>
+            <option value="Transfer">Transfer</option>
+          </select>
+
+          <label for="transactionMethod">Method:</label>
+          <select id="transactionMethod" required>
+            <option value="Cash">Cash</option>
+            <option value="TAAJ">TAAJ</option>
+            <option value="Superwallet">Superwallet</option>
+          </select>
+
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" min="0" step="0.01" required>
+
+          <label for="receiverName">Receiver Name (for Transfer):</label>
+          <input type="text" id="receiverName">
+
+          <div class="button-container">
+            <button type="button">Add Transaction</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Transaction List -->
+      <div class="transaction-list">
+        <h2>Recent Transactions</h2>
+        <table id="transactionTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Customer</th>
+              <th>Type</th>
+              <th>Method</th>
+              <th>Amount</th>
+              <th>Receiver</th>
+            </tr>
+          </thead>
+          <tbody id="transactionTableBody">
+            <!-- Rows will be added dynamically -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Transaction History Section (Hidden by default) -->
+      <div id="transactionHistorySection" class="transaction-history" style="display: none;">
+        <h2>Transaction History</h2>
+        <ul id="transactionHistoryList">
+          <!-- Transaction history items will be added here -->
+        </ul>
+        <button type="button" id="hideHistoryButton">Hide History</button>
+      </div>
+
+      <!-- Report Section -->
+      <div class="report">
+        <h2>Transaction Report</h2>
+        <div class="report-summary">
+          <p>Total Deposits: <span id="totalDeposits">$0.00</span></p>
+          <p>Total Withdrawals: <span id="totalWithdrawals">$0.00</span></p>
+          <p>Total Transfers: <span id="totalTransfers">$0.00</span></p>
+        </div>
+        <canvas id="transactionChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Customer Details Section -->
+    <!-- Change duplicate IDs in customerDetails section -->
+<section id="customerDetails" class="section">
+  <h2>Customer Details</h2>
+  <div class="customer-balances">
+    <ul id="customerDetailsBalanceList"></ul> <!-- Changed ID -->
+  </div>
+  <div class="transaction-history"> <!-- Removed duplicate ID -->
+    <h2>Transaction History</h2>
+    <ul id="customerDetailsHistoryList"></ul> <!-- Changed ID -->
+    <button type="button" class="hideHistoryButton">Hide History</button>
+  </div>
+</section>
+
+    <!-- Settings Section -->
+    <section id="settings" class="section">
+      <h2>Settings</h2>
+      <div class="settings-container">
+        <!-- Theme Selection -->
+        <div class="setting-item">
+          <h3>Theme</h3>
+          <select id="themeSelector">
+            <option value="light">Light Mode</option>
+            <option value="dark">Dark Mode</option>
+          </select>
+        </div>
+        <!-- Notification Toggle -->
+        <div class="setting-item">
+          <h3>Notifications</h3>
+          <label>
+            <input type="checkbox" id="notificationToggle"> Enable Notifications
+          </label>
+        </div>
+        <!-- Data Backup -->
+        <div class="setting-item">
+          <h3>Data Backup</h3>
+          <button type="button" id="exportDataButton">Export Data</button>
+          <button type="button" id="importDataButton">Import Data</button>
+        </div>
+        <!-- Reset Settings -->
+        <div class="setting-item">
+          <h3>Reset</h3>
+          <button type="button" id="resetSettingsButton">Reset to Default</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amana Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+      <div class="navbar-brand">Amana Dashboard</div>
+      <ul class="navbar-nav">
+          <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+          <li><a href="#transactions" class="nav-link">Transactions</a></li>
+          <li><a href="#settings" class="nav-link">Settings</a></li>
+      </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Settings Section -->
+    <section id="settings" class="section">
+      <h2>Settings</h2>
+      <div class="settings-container">
+        <!-- Appearance Settings -->
+        <div class="settings-group">
+          <h3>Appearance</h3>
+          <div class="setting-item">
+            <h4>Theme</h4>
+            <select id="themeSelector">
+              <option value="light">Light Mode</option>
+              <option value="dark">Dark Mode</option>
+              <option value="system">System Default</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <h4>Font Size</h4>
+            <select id="fontSizeSelector">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Notification Settings -->
+        <div class="settings-group">
+          <h3>Notifications</h3>
+          <div class="setting-item">
+            <label>
+              <input type="checkbox" id="notificationToggle"> Enable Desktop Notifications
+            </label>
+          </div>
+          <div class="setting-item">
+            <label>
+              <input type="checkbox" id="soundToggle"> Enable Sound Alerts
+            </label>
+          </div>
+          <div class="setting-item">
+            <h4>Notification Types</h4>
+            <label><input type="checkbox" id="notifyNewTransaction"> New Transactions</label>
+            <label><input type="checkbox" id="notifyLowBalance"> Low Balance Alerts</label>
+            <label><input type="checkbox" id="notifySystemUpdates"> System Updates</label>
+          </div>
+        </div>
+
+        <!-- Data Management -->
+        <div class="settings-group">
+          <h3>Data Management</h3>
+          <div class="setting-item">
+            <h4>Auto Backup</h4>
+            <select id="autoBackupInterval">
+              <option value="never">Never</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <h4>Data Export/Import</h4>
+            <button type="button" id="exportDataButton">Export Data</button>
+            <button type="button" id="importDataButton">Import Data</button>
+          </div>
+        </div>
+
+        <!-- Currency Settings -->
+        <div class="settings-group">
+          <h3>Currency Settings</h3>
+          <div class="setting-item">
+            <h4>Display Currency</h4>
+            <select id="currencySelector">
+              <option value="USD">USD ($)</option>
+              <option value="EUR">EUR (€)</option>
+              <option value="GBP">GBP (£)</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label>
+              <input type="checkbox" id="showCurrencySymbol"> Show Currency Symbol
+            </label>
+          </div>
+        </div>
+
+        <!-- Security Settings -->
+        <div class="settings-group">
+          <h3>Security</h3>
+          <div class="setting-item">
+            <h4>Session Timeout</h4>
+            <select id="sessionTimeout">
+              <option value="15">15 minutes</option>
+              <option value="30">30 minutes</option>
+              <option value="60">1 hour</option>
+              <option value="never">Never</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label>
+              <input type="checkbox" id="requireConfirmation"> Require Confirmation for Large Transactions
+            </label>
+          </div>
+        </div>
+
+        <!-- Reset Options -->
+        <div class="settings-group">
+          <h3>Reset Options</h3>
+          <div class="setting-item">
+            <button type="button" id="resetSettingsButton" class="danger-button">Reset to Default Settings</button>
+            <button type="button" id="clearDataButton" class="danger-button">Clear All Data</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section active">
+      <header>
+        <h1>Amana Dashboard</h1>
+      </header>
+
+      <!-- Search and Customer Balance Section -->
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by Name or Contact">
+        <div id="searchResults" class="search-results"></div>
+        
+        <!-- Add Search Result History Table -->
+        <div id="searchResultHistory" class="search-history" style="display: none;">
+          <h3>Customer Transaction History</h3>
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Method</th>
+                <th>Amount</th>
+                <th>Details</th>
+                <th>Balance After</th>
+              </tr>
+            </thead>
+            <tbody id="searchHistoryTableBody"></tbody>
+          </table>
+          <button type="button" id="hideSearchHistoryButton">Hide History</button>
+        </div>
+      </div>
+
+      <div id="customerBalanceSection" class="customer-balance">
+          <h2>Customer Details</h2>
+          <p><strong>Name:</strong> <span id="customerNameDisplay"></span></p>
+          <p><strong>Contact:</strong> <span id="customerContactDisplay"></span></p>
+          <p><strong>Email:</strong> <span id="customerEmailDisplay"></span></p>
+          <p><strong>Balance:</strong> <span id="customerBalanceDisplay">$0.00</span></p>
+          <p><strong>Last Transaction:</strong> <span id="lastTransactionDisplay">N/A</span></p>
+          <div class="button-group">
+              <button type="button" id="editCustomerButton">Edit Customer</button>
+              <button type="button" id="clearDataButton">Clear Data</button>
+              <button type="button" id="viewHistoryButton">View History</button>
+          </div>
+          
+          <!-- Transaction History -->
+          <div id="mainTransactionHistory" class="transaction-history" style="display: none;">
+              <h3>Transaction History</h3>
+              <table class="history-table">
+                  <thead>
+                      <tr>
+                          <th>Date</th>
+                          <th>Type</th>
+                          <th>Method</th>
+                          <th>Amount</th>
+                          <th>Details</th>
+                          <th>Balance After</th>
+                      </tr>
+                  </thead>
+                  <tbody id="customerTransactionHistory"></tbody>
+              </table>
+              <button type="button" id="hideHistoryButton">Hide History</button>
+          </div>
+      </div>
+
+      <!-- Customer Form -->
+      <div class="form-container">
+          <h2 id="formTitle">Register Customer</h2>
+          <form id="customerForm">
+              <label for="customerName">Customer Name:</label>
+              <input type="text" id="customerName" required>
+
+              <label for="customerContact">Contact:</label>
+              <input type="text" id="customerContact" required>
+
+              <label for="customerEmail">Email:</label>
+              <input type="email" id="customerEmail">
+
+              <label for="customerAddress">Address:</label>
+              <input type="text" id="customerAddress">
+
+              <label for="initialBalance">Initial Deposit:</label>
+              <input type="number" id="initialBalance" min="0" step="0.01" required>
+
+              <div class="button-group">
+                  <button type="button" id="registerButton">Register</button>
+                  <button type="button" id="updateCustomerButton">Update</button>
+                  <button type="button" id="cancelEditButton">Cancel</button>
+              </div>
+          </form>
+          <p id="message" style="display: none;"></p>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="summary">
+        <div class="summary-item">
+          <h3>Total Balance</h3>
+          <p id="totalBalance">$0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Total Deposit</h3>
+          <p id="totalDeposit">$0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Total Transfer</h3>
+          <p id="totalTransfer">$0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Total Withdraw</h3>
+          <p id="totalWithdraw">$0.00</p>
+        </div>
+      </div>
+
+      <!-- Customer Balances Section -->
+      <div class="customer-balances">
+        <h2>Customer Balances</h2>
+        <ul id="customerBalanceList"></ul>
+      </div>
+
+      <!-- Recent Transactions -->
+      <div class="transaction-list">
+        <h2>Recent Transactions</h2>
+        <table id="transactionTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Customer</th>
+              <th>Type</th>
+              <th>Method</th>
+              <th>Amount</th>
+              <th>Receiver</th>
+            </tr>
+          </thead>
+          <tbody id="transactionTableBody"></tbody>
+        </table>
+      </div>
+
+      <!-- Report Section -->
+      
+        <canvas id="transactionChart"></canvas>
+      <!-- Remove or fix this extra closing tag -->
+      </div>
+    </section>
+
+    <!-- Transactions Section -->
+    <section id="transactions" class="section">
+      <h2>Transactions Management</h2>
+      
+      <!-- Transaction Form -->
+      <div class="form-container">
+        <h2>Add Transaction</h2>
+        <form id="transactionForm">
+          <label for="transactionCustomer">Customer Name:</label>
+          <input type="text" id="transactionCustomer" required>
+
+          <label for="transactionType">Type:</label>
+          <select id="transactionType" required>
+            <option value="Deposit">Deposit</option>
+            <option value="Withdrawal">Withdrawal</option>
+            <option value="Transfer">Transfer</option>
+          </select>
+
+          <label for="transactionMethod">Method:</label>
+          <select id="transactionMethod" required>
+            <option value="Cash">Cash</option>
+            <option value="TAAJ">TAAJ</option>
+            <option value="Superwallet">Superwallet</option>
+          </select>
+
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" min="0" step="0.01" required>
+
+          <label for="receiverName">Receiver Name (for Transfer):</label>
+          <input type="text" id="receiverName">
+
+          <div class="button-container">
+            <button type="button" id="addTransactionButton">Add Transaction</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- All Transactions -->
+      <!-- Remove this duplicate transaction table -->
+      <div class="transaction-list">
+          <h2>All Transactions</h2>
+          <table id="transactionsTable">
+              <!-- Remove this duplicate table -->
+          </table>
+      </div>
+      
+      <!-- Instead, modify the existing Recent Transactions section to handle all transactions -->
+      <div class="transaction-list">
+          <h2>Recent Transactions</h2>
+          <table id="transactionTable">
+              <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Customer</th>
+                      <th>Type</th>
+                      <th>Method</th>
+                      <th>Amount</th>
+                      <th>Receiver</th>
+                  </tr>
+              </thead>
+              <tbody id="transactionTableBody"></tbody>
+          </table>
+      </div>
+      <!-- Remove duplicate transaction tables and keep only this one -->
+      <div class="transaction-list">
+          <h2>All Transactions</h2>
+          <table id="allTransactionsTable">
+              <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Customer</th>
+                      <th>Type</th>
+                      <th>Method</th>
+                      <th>Amount</th>
+                      <th>Receiver</th>
+                  </tr>
+              </thead>
+              <tbody id="allTransactionsTableBody"></tbody>
+          </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="navigation.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
